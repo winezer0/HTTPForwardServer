@@ -88,6 +88,11 @@ https://mp.weixin.qq.com/s/2PBgJzKRt4DaL2uAQX50GA
 
 
 
-### 0X06 NOVASEC联系
+### 0X06 NEED STAR And ISSUE
+
+```
+1、右上角点击Star支持更新.
+2、ISSUE或NOVASEC提更新需求
+```
 
 ![NOVASEC](doc/NOVASEC.jpg)
