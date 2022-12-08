@@ -90,4 +90,4 @@ https://mp.weixin.qq.com/s/2PBgJzKRt4DaL2uAQX50GA
 
 ### 0X06 NOVASEC联系
 
-![NOVASEC](.\doc\NOVASEC.jpg)
+![NOVASEC](doc/NOVASEC.jpg)
