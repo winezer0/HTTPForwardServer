@@ -62,11 +62,26 @@
 ### 0X04 使用方法
 
 ```
-1、在【http.txt】内粘贴【burp格式的】HTTP请求报文
-2、在【http.txt】内在需要替换位置输入【***】
-3、在【setting.py】中指定目标URL的协议，AUTO表示自动识别
-4、访问本地【http://127.0.0.1:8888/forward?sql=1】
-5、在【setting.py】可配置相关参数名、请求代理等
+1、在【http.txt】内、粘贴【burp格式的】HTTP请求报文
+2、在【http.txt】内在需要替换位置输入【***】，参考sqlmap的【*】标志
+3、在【setting.py】中指定目标URL的协议，【AUTO】表示自动识别
+4、启动【python3 httpRelayServer.py】
+
+注意：协议自动识别可能存在错误，请注意查看提示信息:
+未检测成功：
+[*] PROTOCOL CHECK RESULT:{'https': -1, 'http': -1}
+[+] 当前自动获取的请求协议为:None 
+
+已检测成功：
+[*] PROTOCOL CHECK RESULT:{'https': -1, 'http': 302}
+[+] 当前自动获取的请求协议为:http
+
+
+5、访问本地【http://127.0.0.1:8888/forward?sql=1】 
+正常响应应该为【http.txt】重放的效果
+可通过配置【setting.py】的【GB_PROXIES】进行流量查看。
+
+6、在【setting.py】可配置相关参数名、请求代理等。
 ```
 
 

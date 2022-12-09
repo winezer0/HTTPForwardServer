@@ -6,8 +6,8 @@ GB_HTTP_FILE = "http.txt"
 GB_FILE_HASH = None # 判断是否需要重新加载变量
 # 对外请求代理
 GB_PROXIES = {
-    "http": "http://127.0.0.1:8080",
-    "https": "http://127.0.0.1:8080",
+    # "http": "http://127.0.0.1:8080",
+    # "https": "http://127.0.0.1:8080",
     # "http": "http://user:pass@10.10.1.10:3128/",
     # "https": "https://192.168.88.1:8080",
     # "http": "socks5://192.168.88.1:1080",
