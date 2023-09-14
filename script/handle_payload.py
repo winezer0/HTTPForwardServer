@@ -7,5 +7,5 @@ sys.dont_write_bytecode = True  # 设置不生成pyc文件
 
 
 def handle_payload(payload):
-    payload = urllib.parse.quote(payload)
+
     return payload

@@ -11,12 +11,13 @@ from script.parse_http_pkg import parse_http_pkg_simple
 from script.util import read_file, parse_request, get_file_md5
 import setting
 
+# 判断是否需要重新加载变量
+
 # 初始化HTTP报文 # 存放在此处不支持热加载
 http_pkg = read_file(setting.GB_HTTP_FILE)
-setting.GB_FILE_HASH = get_file_md5(setting.GB_HTTP_FILE)
 http_host, http_method, http_path, http_headers, http_body, http_content_type = parse_http_pkg_simple(http_pkg)
 # 动态判断判断请求协议
-if setting.GB_PROTOCOL.lower() == "auto":
+if "auto" in setting.GB_PROTOCOL.lower():
     setting.GB_PROTOCOL = check_protocol(http_host, http_path)
     print(f"[+] 当前自动获取的请求协议为:{setting.GB_PROTOCOL}")
 
@@ -24,6 +25,7 @@ sys.dont_write_bytecode = True  # 设置不生成pyc文件
 
 # 启动FLASK服务器
 app = Flask(__name__)
+
 
 @app.route(f'/{setting.GB_CLIENT_FILE}', methods=['GET', 'POST'])
 def forward():

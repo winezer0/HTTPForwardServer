@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # encoding: utf-8
+
 # 全局配置文件
+GB_VERSION = "0.2 20230914"  # 无需关注
+GB_FILE_HASH = None  # 无需关注
+
 # 输入原始报文路径
 GB_HTTP_FILE = "http.txt"
-GB_FILE_HASH = None # 判断是否需要重新加载变量
 # 对外请求代理
 GB_PROXIES = {
     # "http": "http://127.0.0.1:8080",
@@ -28,4 +31,3 @@ GB_PROTOCOL = "AUTO"  # HTTPS|HTTP|AUTO
 # 记录由于代理服务器导致的协议判断不正确响应关键字
 GB_ERROR_PAGE_KEY = ["burp suite"]
 # burpsuite中可通过 [勾选抑制错误消息] 修复该问题
-
