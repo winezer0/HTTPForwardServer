@@ -26,7 +26,7 @@ GB_CLIENT_PARAM = "sql"
 # 报文中替换pyload的符号标记
 GB_MARK_SYMBOL = "***"
 # 是否是HTTPS协议
-GB_PROTOCOL = "AUTO"  # HTTPS|HTTP|AUTO
+GB_PROTOCOL = "HTTP"  # HTTPS|HTTP|AUTO
 
 # 记录由于代理服务器导致的协议判断不正确响应关键字
 GB_ERROR_PAGE_KEY = ["burp suite"]

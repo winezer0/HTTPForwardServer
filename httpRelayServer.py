@@ -12,6 +12,7 @@ from script.util import read_file, parse_request, get_file_md5
 import setting
 
 # 判断是否需要重新加载变量
+setting.GB_FILE_HASH = get_file_md5(setting.GB_HTTP_FILE)
 
 # 初始化HTTP报文 # 存放在此处不支持热加载
 http_pkg = read_file(setting.GB_HTTP_FILE)
