@@ -36,6 +36,9 @@ def check_protocol(host, path):
 
     print(f"[*] PROTOCOL CHECK RESULT:{result}")
 
+    # 处理协议值为None的情况
+    result = {key: value if value is not None else -1 for key, value in result.items()}
+
     if result["https"] <= 0 and result["http"] <= 0:
         return None
 
@@ -50,6 +53,7 @@ def check_protocol(host, path):
             return "http"
         else:
             return "https"
+
 
 if __name__ == "__main__":
     host = 'petstore.swagger.io'
